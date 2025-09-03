@@ -1,5 +1,3 @@
-//Simulacao.java
-
 public class Simulacai 
 {
     public static void main(String[] args)

@@ -1,4 +1,3 @@
-//Radar.java
 public class Radar 
 {
 

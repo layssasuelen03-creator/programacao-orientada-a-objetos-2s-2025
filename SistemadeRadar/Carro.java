@@ -1,5 +1,3 @@
-//Carro.java
-
 public class Carro 
 {
     public Integer ano; 
