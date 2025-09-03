@@ -1,18 +1,14 @@
+//Simulacao.java
 
 public class Simulacai 
 {
     public static void main(String[] args)
     {
-        Carro opala = new Carro();
-        opala.velocidade = 0; //está parado
-        opala.placa = "ACLR300";
-        opala.modelo = "Comodoro";
-        opala.ano = 76;
-
-        Radar radar = new Radar();
-        radar.modelo = "pardal";
-        radar.limitedeVelocidade = 60;
-        radar.localizacao = "Pistão Sul";
+        Carro opala = new Carro( "ACLR300",  0, 76, "Comodoro");
+        
+        Radar radar = new Radar( "Pistão Sul", 60);
+       
+        radar.avaliarVelocidade(opala);
 
         opala.acelerar(); //5
         opala.acelerar(); //10
@@ -21,12 +17,8 @@ public class Simulacai
         opala.acelerar();
         opala.acelerar();
         opala.acelerar();
-        opala.acelerar();
-        opala.acelerar();
-        opala.acelerar();
-        opala.acelerar();
-        opala.acelerar();
         opala.acelerar(); //60
+        opala.setVelocidade(-60);
 
         radar.avaliarVelocidade(opala);
 
@@ -35,5 +27,7 @@ public class Simulacai
 
         opala.frear(); //60
         radar.avaliarVelocidade(opala);
+
+        
     }
 }
