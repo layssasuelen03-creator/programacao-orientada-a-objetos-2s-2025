@@ -8,7 +8,7 @@ public class Usuario extends Pessoa
         this.matricula = matricula;
     }
 
-    @Override // métados que sobreescrevi da superclasse 
+    @Override // métados que sobrescrevi da superclasse 
     public void exibirInfo() 
     {
         System.out.println("Nome: " + getNome());

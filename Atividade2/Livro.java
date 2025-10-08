@@ -8,7 +8,7 @@ public class Livro extends Material
         this.autor = autor;
     }
 
-    @Override // métados que sobreescrevi da superclasse 
+    @Override // métados que sobrescrevi da superclasse 
     public void descricao() 
     {
         System.out.println("Título: " + getTitulo());

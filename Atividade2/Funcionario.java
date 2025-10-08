@@ -8,7 +8,7 @@ public class Funcionario extends Pessoa
         this.cargo = cargo;
     }
 
-    @Override // métados que sobreescrevi da superclasse 
+    @Override // métados que sobrescrevi da superclasse 
     public void exibirInfo() 
     {
         System.out.println("Nome: " + getNome());
