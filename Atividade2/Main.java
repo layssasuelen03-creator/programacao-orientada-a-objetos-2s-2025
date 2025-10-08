@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main 
-{
-    public static void main(String[] args) 
-    {
+public class Main {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Pessoa> pessoas = new ArrayList<>();
@@ -28,8 +26,7 @@ public class Main
             opcao = sc.nextInt();
             sc.nextLine(); // consumir quebra de linha
 
-            switch (opcao) 
-            {
+            switch (opcao) {
                 case 1:
                     System.out.print("Nome: ");
                     String nomeU = sc.nextLine();
@@ -55,16 +52,9 @@ public class Main
 
                 case 3:
                     System.out.println("=== Lista de Pessoas ===");
-                    if (pessoas.isEmpty()) 
-                    {
-                        System.out.println("Nenhuma pessoa cadastrada. ");
-                    }else{
-                        for (int i = 0; i < pessoas.size(); i++)
-                        {
-                            System.out.println("[" + i +"]");
-                            pessoas.get(i).exibirInfo();
-                            System.out.println("-------------------");
-                        }
+                    for (Pessoa p : pessoas) {
+                        p.exibirInfo();
+                        System.out.println("-------------------");
                     }
                     break;
 
@@ -76,9 +66,7 @@ public class Main
                     sc.nextLine();
                     System.out.print("Autor: ");
                     String autor = sc.nextLine();
-                    System.out.print("Edição: ");
-                    String edicao = sc.nextLine();
-                    materiais.add(new Livro(tituloL, anoL, autor, edicao));
+                    materiais.add(new Livro(tituloL, anoL, autor));
                     System.out.println("Livro cadastrado!\n");
                     break;
 
@@ -87,46 +75,35 @@ public class Main
                     String tituloR = sc.nextLine();
                     System.out.print("Ano de publicação: ");
                     int anoR = sc.nextInt();
-                    sc. nextLine();
-                    System.out.print("Autor: ");
-                    String autoR = sc.nextLine();
-                    
-                    materiais.add(new Revista(tituloR, anoR, autoR));
+                    System.out.print("Edição: ");
+                    int edicao = sc.nextInt();
+                    sc.nextLine();
+                    materiais.add(new Revista(tituloR, anoR, edicao));
                     System.out.println("Revista cadastrada!\n");
                     break;
 
                 case 6:
-                    System.out.println("=== Lista de Materias ===");
-                    if (materiais.isEmpty()) 
-                    {
-                        System.out.println("Nenhum material cadastrada. ");
-                    }else{
-                        for (int i = 0; i < materiais.size(); i++)
-                        {
-                            System.out.println("[" + i +"]");
-                            materiais.get(i).descricao();
-                            System.out.println("-------------------");
-                        }
+                    System.out.println("=== Lista de Materiais ===");
+                    for (Material m : materiais) {
+                        m.descricao();
+                        System.out.println("-------------------");
                     }
                     break;
 
                 case 7:
-                    if (pessoas.isEmpty() || materiais.isEmpty()) 
-                    {
+                    if (pessoas.isEmpty() || materiais.isEmpty()) {
                         System.out.println("É necessário ter pelo menos uma pessoa e um material cadastrados.\n");
                         break;
                     }
                     System.out.println("Escolha o usuário (índice):");
-                    for (int i = 0; i < pessoas.size(); i++) 
-                    { 
+                    for (int i = 0; i < pessoas.size(); i++) { 
                             System.out.println(i + " - " + pessoas.get(i).getNome());
                     }
                     int idxUsuario = sc.nextInt();
                     sc.nextLine();
 
                     System.out.println("Escolha o material (índice):");
-                    for (int i = 0; i < materiais.size(); i++) 
-                    {
+                    for (int i = 0; i < materiais.size(); i++) {
                         System.out.println(i + " - " + materiais.get(i).getTitulo());
                     }
                     int idxMaterial = sc.nextInt();
@@ -145,16 +122,9 @@ public class Main
 
                 case 8:
                     System.out.println("=== Lista de Empréstimos ===");
-                    if (emprestimos.isEmpty()) 
-                    {
-                        System.out.println("Nenhum empréstimo cadastrada. ");
-                    }else{
-                        for (int i = 0; i < emprestimos.size(); i++)
-                        {
-                            System.out.println("[" + i +"]");
-                            emprestimos.get(i).exibirDetalhes();
-                            System.out.println("-------------------");
-                        }
+                    for (Emprestimo e : emprestimos) {
+                        e.exibirDetalhes();
+                        System.out.println("-------------------");
                     }
                     break;
 

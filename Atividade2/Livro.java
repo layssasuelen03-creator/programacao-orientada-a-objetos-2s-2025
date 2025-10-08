@@ -1,32 +1,28 @@
-
 public class Livro extends Material 
 {
     private String autor;
-    private String edicao;
 
-    public Livro(String titulo, int anoPublicacao, String autor, String edicao) 
+    public Livro(String titulo, Integer anoPublicacao, String autor) 
     {
         super(titulo, anoPublicacao);
         this.autor = autor;
-        this.edicao = edicao;
     }
 
-    @Override //anotação que sobrescrevi da superclasse
+    @Override // métados que sobreescrevi da superclasse 
     public void descricao() 
     {
-        System.out.println("Livro: " + getTitulo());
-        System.out.println("Ano de Publicação: " + getAnoPublicacao());
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Publicação: " + getAnoPublicacao());
         System.out.println("Autor: " + autor);
-        System.out.println("Edição: " + edicao);
     }
 
-    public String getEdicao() 
+    public String getAutor() 
     {
-        return edicao;
+        return autor;
     }
 
-    public void setEdicao(String edicao) 
+    public void setAutor(String autor) 
     {
-        this.edicao = edicao;
+        this.autor = autor;
     }
 }

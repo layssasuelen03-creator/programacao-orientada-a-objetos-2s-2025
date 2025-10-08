@@ -1,4 +1,3 @@
-
 public class Funcionario extends Pessoa 
 {
     private String cargo;
@@ -9,10 +8,10 @@ public class Funcionario extends Pessoa
         this.cargo = cargo;
     }
 
-    @Override //anotação que sobrescrevi da superclasse
+    @Override // métados que sobreescrevi da superclasse 
     public void exibirInfo() 
     {
-        System.out.println("Funcionário: " + getNome());
+        System.out.println("Nome: " + getNome());
         System.out.println("Email: " + getEmail());
         System.out.println("Cargo: " + cargo);
     }

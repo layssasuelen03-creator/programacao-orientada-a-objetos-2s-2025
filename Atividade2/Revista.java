@@ -1,29 +1,28 @@
-
 public class Revista extends Material 
 {
-    private String autor;
+    private Integer edicao;
 
-    public Revista(String titulo, int anoPublicacao, String autor) 
+    public Revista(String titulo, Integer anoPublicacao, Integer edicao) 
     {
         super(titulo, anoPublicacao);
-        this.autor = autor;
+        this.edicao = edicao;
     }
 
-    @Override //anotação que sobrescrevi da superclasse
+    @Override // métados que sobreescrevi da superclasse 
     public void descricao() 
     {
-        System.out.println("Revista: " + getTitulo());
-        System.out.println("Ano de Publicação: " + getAnoPublicacao());
-        System.out.println("Autor: " + autor);
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Publicação: " + getAnoPublicacao());
+        System.out.println("Edição: " + edicao);
     }
 
-    public String getAutor() 
+    public Integer getEdicao() 
     {
-        return autor;
+        return edicao;
     }
 
-    public void setAutor(String autor) 
+    public void setEdicao(Integer edicao) 
     {
-        this.autor = autor;
+        this.edicao = edicao;
     }
 }

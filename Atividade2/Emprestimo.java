@@ -1,4 +1,3 @@
-
 public class Emprestimo 
 {
     private Pessoa pessoa;
@@ -6,8 +5,7 @@ public class Emprestimo
     private String dataEmprestimo;
     private String dataDevolucao;
 
-    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) 
-    {
+    public Emprestimo(Pessoa pessoa, Material material, String dataEmprestimo, String dataDevolucao) {
         this.pessoa = pessoa;
         this.material = material;
         this.dataEmprestimo = dataEmprestimo;
@@ -16,18 +14,12 @@ public class Emprestimo
 
     public void exibirDetalhes() 
     {
-        System.out.println("===== Detalhes do Empréstimo =====");
-        System.out.println("Data de Empréstimo: " + dataEmprestimo);
-        System.out.println("Data de Devolução: " + dataDevolucao);
-        System.out.println();
-
-        System.out.println("\n--- Pessoa ---");
+        System.out.println("Data do empréstimo: " + dataEmprestimo);
+        System.out.println("Data de devolução: " + dataDevolucao);
+        System.out.println("--- Pessoa ---");
         pessoa.exibirInfo();
-        System.out.println();
-        
-        System.out.println("\n--- Material ---");
+        System.out.println("--- Material ---");
         material.descricao();
-        System.out.println("==============================\n");
     }
 
     public Pessoa getPessoa() 
@@ -35,9 +27,19 @@ public class Emprestimo
         return pessoa;
     }
 
+    public void setPessoa(Pessoa pessoa) 
+    {
+        this.pessoa = pessoa;
+    }
+
     public Material getMaterial() 
     {
         return material;
+    }
+
+    public void setMaterial(Material material) 
+    {
+        this.material = material;
     }
 
     public String getDataEmprestimo() 
@@ -45,8 +47,18 @@ public class Emprestimo
         return dataEmprestimo;
     }
 
+    public void setDataEmprestimo(String dataEmprestimo) 
+    {
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
     public String getDataDevolucao() 
     {
         return dataDevolucao;
+    }
+
+    public void setDataDevolucao(String dataDevolucao) 
+    {
+        this.dataDevolucao = dataDevolucao;
     }
 }
