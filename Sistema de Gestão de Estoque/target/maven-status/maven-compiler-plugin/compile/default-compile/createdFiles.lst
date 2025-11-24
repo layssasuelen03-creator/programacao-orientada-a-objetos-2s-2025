@@ -1,0 +1,12 @@
+br\estoque\Main.class
+br\estoque\entity\ProdutoPerecivel.class
+br\estoque\entity\Fornecedor.class
+br\estoque\dao\CategoriaDAO.class
+br\estoque\dao\FornecedorDAO.class
+br\estoque\entity\ProdutoDuravel.class
+br\estoque\util\HibernateUtil.class
+br\estoque\entity\Categoria.class
+br\estoque\entity\Movimentacao.class
+br\estoque\dao\MovimentacaoDAO.class
+br\estoque\dao\ProdutoDAO.class
+br\estoque\entity\Produto.class
