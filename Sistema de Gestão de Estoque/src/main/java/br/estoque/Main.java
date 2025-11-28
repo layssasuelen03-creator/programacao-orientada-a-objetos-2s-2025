@@ -235,7 +235,7 @@ public class Main {
                     System.out.print("Quantidade: ");
                     Integer q = Integer.parseInt(sc.nextLine());
 
-                    System.out.print("Observação: ");
+                    System.out.print("Observação: ");                     
                     String obs = sc.nextLine();
 
                     Movimentacao m = new Movimentacao(prod, t, q, obs);
