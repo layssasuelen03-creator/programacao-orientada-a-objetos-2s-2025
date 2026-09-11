@@ -8,10 +8,10 @@
         <!-- CONEXÃO COM O BANCO -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/estoque?useSSL=false&amp;serverTimezone=UTC
+            jdbc:mysql://localhost:3306/estoque?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
         </property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Layssa01*</property>
+        <property name="hibernate.connection.password"></property>
 
         <!-- DIALETO CORRETO PARA MYSQL 8 -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
