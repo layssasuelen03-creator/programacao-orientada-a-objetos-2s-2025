@@ -1,0 +1,135 @@
+# Sistema de Gestão de Estoque
+
+Sistema desenvolvido em Java para gerenciamento de estoque, com persistência de dados utilizando MySQL e Hibernate. A aplicação é executada diretamente pelo terminal.
+
+## Tecnologias
+
+- Java
+- Hibernate
+- MySQL
+- Maven
+- JDBC
+- Padrão DAO
+- Programação Orientada a Objetos
+
+## Estrutura do Projeto
+
+    Sistema de Gestão de Estoque/
+    │
+    ├── .vscode/
+    │
+    ├── src/
+    │   └── main/
+    │       ├── java/
+    │       │   └── br/
+    │       │       └── estoque/
+    │       │           ├── dao/
+    │       │           │   ├── CategoriaDAO.java
+    │       │           │   ├── FornecedorDAO.java
+    │       │           │   ├── MovimentacaoDAO.java
+    │       │           │   └── ProdutoDAO.java
+    │       │           │
+    │       │           ├── entity/
+    │       │           │   ├── Categoria.java
+    │       │           │   ├── Fornecedor.java
+    │       │           │   ├── Movimentacao.java
+    │       │           │   ├── Produto.java
+    │       │           │   ├── ProdutoDuravel.java
+    │       │           │   └── ProdutoPerecivel.java
+    │       │           │
+    │       │           ├── util/
+    │       │           │   └── HibernateUtil.java
+    │       │           │
+    │       │           └── Main.java
+    │       │
+    │       └── resources/
+    │           └── hibernate.cfg.xml
+    │
+    ├── target/
+    └── pom.xml
+
+## Banco de Dados
+
+O sistema utiliza o MySQL como banco de dados: estoque
+
+Principais tabelas:
+
+- `categoria`
+- `fornecedor`
+- `movimentacao`
+- `produto`
+- `produto_duravel`
+- `produto_perecivel`
+
+A configuração da conexão com o banco está localizada em:
+
+    src/main/resources/hibernate.cfg.xml
+
+## Como Executar
+
+### Pré-requisitos
+
+É necessário ter instalado:
+
+- Java JDK
+- Maven
+- MySQL
+
+### 1. Clonar o projeto
+
+    git clone URL_DO_REPOSITORIO
+
+Depois, entre na pasta do projeto:
+
+    cd "Sistema de Gestão de Estoque"
+
+### 2. Configurar o banco de dados
+
+Crie o banco no MySQL:
+
+    CREATE DATABASE estoque;
+
+Depois, abra o arquivo:
+
+    src/main/resources/hibernate.cfg.xml
+
+Configure o usuário e a senha do seu MySQL.
+
+### 3. Compilar o projeto
+
+Na pasta onde está localizado o `pom.xml`, execute:
+
+    mvn clean compile
+
+Se aparecer:
+
+    BUILD SUCCESS
+
+o projeto foi compilado corretamente.
+
+### 4. Executar o projeto
+
+Execute:
+
+    mvn exec:java "-Dexec.mainClass=br.estoque.Main"
+
+O sistema será iniciado diretamente no terminal.
+
+## Conceitos Aplicados
+
+O projeto utiliza conceitos de **Programação Orientada a Objetos**, como:
+
+- Encapsulamento
+- Abstração
+- Herança
+- Polimorfismo
+
+Também utiliza o padrão **DAO** para organização do acesso aos dados e o **Hibernate** para realizar a persistência das informações no banco de dados.
+
+## Persistência de Dados
+
+A comunicação da aplicação ocorre da seguinte forma:
+
+    Java → Hibernate → JDBC → MySQL
+
+Os dados são armazenados no banco de dados, não apenas em memória.
